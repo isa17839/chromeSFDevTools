@@ -1,0 +1,46 @@
+<html >
+	<head>
+        <link rel = "stylesheet" type = "text/css" href = "/css/vendor/salesforce-lightning-design-system.min.css" />
+        <link rel = "stylesheet" type = "text/css" href = "/css/popup.css" />        
+	</head>
+	<body style="margin: 20px; width: 500px; min-height: 450px;" class="slds">
+        <div class="slds-page-header">
+          <div class="slds-media">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-standard-default" title="Amazing Salesforce Chrome Extension">
+                <img class="slds-icon slds-page-header__icon" src="img/icon.png" />
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h1 class="slds-page-header__title slds-truncate slds-align-middle">TraceFlags creator</h1>
+            <p class="slds-text-body_small slds-line-height_reset">
+                Create traceFlags.<br/>
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button id="create-trace-flags">
+            Create TraceFlags
+          </button>
+        </div>
+        <div>
+          <div>SID: <span id="sid">Looking for a SID...</span></div>
+
+          <div>Data:</div>
+          <div id="data"></div>
+
+          <div>Storage:</div>
+          <div id="storage"></div>
+
+        </div>
+
+		<div id="content" />
+    
+		<script src="libs/vendor/jquery.min.js"></script>
+        <script src="libs/utils.js"></script>
+        <script src="libs/sfapi.js"></script>
+		<script src="libs/popup.js"></script>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "Chrome Salesforce Dev Tools",
+  "short_name" : "Chrome Salesforce Dev Tools",
+  "description": "Chrome Salesforce Dev Tools",
+  "version": "0.0.5",
+  "author":{
+    "name":"Igor Savchenko"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "cookies",
+    "https://*.salesforce.com/*",
+    "https://*.force.com/*"
+  ],
+  "web_accessible_resources": [
+    "options.html",
+    "img/*"
+  ],
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Amazing Salesforce Chrome Extension"
+  },
+  "icons": { 
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png" 
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["https://*.force.com/*","https://*.salesforce.com/*"],
+      "all_frames":false,
+      "js": [
+        "libs/utils.js",
+        "libs/sfapi.js"
+      ],
+      "css" : [
+        "css/content.css"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "libs/utils.js",
+      "libs/background.js"
+    ],
+    "persistent" : true
+  },
+  "options_page": "options.html"
+}

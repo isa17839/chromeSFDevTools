@@ -1,0 +1,54 @@
+<html >
+	<head>
+		<link rel = "stylesheet" type = "text/css" href = "/css/vendor/salesforce-lightning-design-system.min.css" />
+        <link rel = "stylesheet" type = "text/css" href = "/css/options.css" />
+	</head>
+	<body style="margin: 20px; " class="slds">
+		<div class="slds-page-header">
+          <div class="slds-media">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-standard-default" title="Amazing Salesforce Chrome Extension">
+                <img class="slds-icon slds-page-header__icon" src="img/icon.png" />
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h1 class="slds-page-header__title slds-truncate slds-align-middle">Chrome Salesforce Dev Tools</h1>
+            <p class="slds-text-body_small slds-line-height_reset">
+                Configure extension.<br/>
+            </p>
+            </div>
+          </div>
+        </div>
+        <hr/>
+
+        <div class="slds-form slds-form_compound">
+    		<fieldset class="slds-form-element">
+				<div class="slds-form-element__group">
+			        <div class="slds-form-element__row">
+			          	<div class="slds-form-element slds-size_1-of-6">
+							<label class="slds-form-element__label" >Comma-separated class list for trace flags:</label>
+							<div class="slds-form-element__control">
+								<div class="slds-input_container">
+									<input class="slds-input" id="classes-to-create-trace-flags-for" />
+								</div>
+							</div>
+						</div>
+						<div class="slds-form-element slds-size_1-of-6">
+							<label class="slds-form-element__label" >&nbsp;</label>
+							<div class="slds-form-element__control">
+								<button class="slds-button slds-button_brand" id="save-storage">save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+		<hr/>
+		
+		<div id="content" ></div>
+		<pre id="messageBox"></pre>
+		<script src="libs/vendor/jquery.min.js"></script>
+		<script src="libs/utils.js"></script>
+		<script src="libs/options.js"></script>
+	</body>
+</html>
